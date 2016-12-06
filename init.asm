@@ -1,0 +1,85 @@
+-- Init S arrary -- 
+ADDI $15, xb7e15163
+SW $15, 0($0)
+ADDI $15, x5618cb1c
+SW $15, 1($0)
+ADDI $15, xf45044d5
+SW $15, 2($0)
+ADDI $15, x9287be8e
+SW $15, 3($0)
+ADDI $15, x30bf3847
+SW $15, 4($0)
+ADDI $15, xcef6b200
+SW $15, 5($0)
+ADDI $15, x6d2e2bb9
+SW $15, 6($0)
+ADDI $15, x0b65a572
+SW $15, 7($0)
+ADDI $15, xa99d1f2b
+SW $15, 8($0)
+ADDI $15, x47d498e4
+SW $15, 9($0)
+ADDI $15, xe60c129d
+SW $15, 10($0)
+ADDI $15, x84438c56
+SW $15, 11($0)
+ADDI $15, x227b060f
+SW $15, 12($0)
+ADDI $15, xc0b27fc8
+SW $15, 13($0)
+ADDI $15, x5ee9f981
+SW $15, 14($0)
+ADDI $15, xfd21733a
+SW $15, 15($0)
+ADDI $15, x9b58ecf3
+SW $15, 16($0)
+ADDI $15, x399066ac
+SW $15, 17($0)
+ADDI $15, xd7c7e065
+SW $15, 18($0)
+ADDI $15, x75ff5a1e
+SW $15, 19($0)
+ADDI $15, x1436d3d7
+SW $15, 20($0)
+ADDI $15, xb26e4d90
+SW $15, 21($0)
+ADDI $15, x50a5c749
+SW $15, 22($0)
+ADDI $15, xeedd4102
+SW $15, 23($0)
+ADDI $15, x8d14babb
+SW $15, 24($0)
+ADDI $15, x2b4c3474
+SW $15, 25($0)
+
+-- Init L array --
+ADDI $15, x00000000
+SW $15, 26($0)
+ADDI $15, x00000000
+SW $15, 27($0)
+ADDI $15, x00000000
+SW $15, 28($0)
+ADDI $15, x00000001
+SW $15, 29($0)
+
+-- Init user key -- 
+ADDI $15, x00000000
+SW $15, 30($0)
+ADDI $15, x00000000
+SW $15, 31($0)
+ADDI $15, x00000000
+SW $15, 32($0)
+ADDI $15, x00000001
+SW $15, 33($0)
+
+-- Init Pw and Qw -- 
+ADDI $15, xB7E15163
+SW $15, 0($0)
+ADDI $15, x9E3779B9
+SW $15, 0($0)
+
+-- Init AB -- 
+ADDI $15, x00000001
+SW $15, 0($0)
+ADDI $15, x00000001
+SW $15, 0($0)
