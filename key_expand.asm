@@ -27,10 +27,12 @@ ADD $2, $2, $3
 ADD $2, $2, $4
 ADD $5, $0, $2
 ADD $6, $3, $4
+ANDI $6, $6, 31
 SHL $5, $5, 1 
 SUBI $6, $6, 1
 BNE $6, $0, -3 // shift l[i]+a+b left by a+b bits
 ADD $6, $3, $4
+ANDI $6, $6, 31
 SHR $1, $1, 1 
 ADDI $6, $6, 1
 BNE $6, $30, -3 // shift l[i]+a+b right by 32-a-b bits

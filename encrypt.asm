@@ -22,11 +22,13 @@ OR $4, $4, $1
 AND $1, $3, $4 // a xor b = (!a or b) and (a or !b)
 ADD $3, $0, $1
 ADD $4, $0, $2
+ANDI $4, $4, 31
 BEQ $2, $0, 3
 SHL $3, $3, 1 
 SUBI $4, $4, 1
 BNE $4, $0, -3 // shift a left by b bits
 ADD $4, $0, $2
+ANDI $4, $4, 31
 BEQ $2, $0, 3
 SHR $1, $1, 1 
 ADDI $4, $4, 1
@@ -41,11 +43,13 @@ OR $4, $4, $1
 AND $2, $3, $4 // a xor b = (!a or b) and (a or !b)
 ADD $3, $0, $2
 ADD $4, $0, $1
+ANDI $4, $4, 31
 BEQ $1, $0, 3
 SHL $3, $3, 1 
 SUBI $4, $4, 1
 BNE $4, $0, -3 // shift b left by a bits
 ADD $4, $0, $1
+ANDI $4, $4, 31
 BEQ $1, $0, 3
 SHR $2, $2, 1 
 ADDI $4, $4, 1
