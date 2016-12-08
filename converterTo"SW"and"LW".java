@@ -33,7 +33,6 @@ class InstructionSWandLW{
 		}
 		//5bit Rt
 		rt = str[1];
-		System.out.println("rt:"+rt);
 		rt = new BigInteger(rt.trim(), 10).toString(2);
 		while(rt.length() < 5){
 			rt = "0" + rt; 

@@ -1,6 +1,7 @@
+//convert assembly language to machine code
 import java.util.Scanner;;
 import java.math.BigInteger;
-class Encrypt {
+class Converter {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String input = in.nextLine();
@@ -15,6 +16,10 @@ class Encrypt {
 				break;
 			case "LW":
 				result += "000111";
+				type = "I";
+				break;
+			case "BLT":
+				result += "001001";
 				type = "I";
 				break;
 			case "ADD":
@@ -36,6 +41,11 @@ class Encrypt {
 				result += "000011";
 				type = "I";
 				break;
+			case "AND":
+				result += "000000";
+				type = "R";
+				funct = "010010";
+				break;
 			case "BEQ":
 				result += "001010";
 				type = "I";
@@ -46,6 +56,10 @@ class Encrypt {
 				break;
 			case "SUBI":
 				result += "000010";
+				type = "I";
+				break;
+			case "SUB":
+				result += "000000";
 				type = "I";
 				break;
 			case "BNE":
@@ -76,7 +90,7 @@ class Encrypt {
 				}
 			}
 			str[k] = String.valueOf(newchs);
-			System.out.println("str[k]:" + str[k]);
+//			System.out.println("str[k]:" + str[k]);
 		}
 		
 		if(type.equals("I")){
