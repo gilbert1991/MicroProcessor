@@ -107,7 +107,10 @@ class Converter {
 				rt = "0" + rt; 
 			}
 			//16bit immdediate address
-			String add = new BigInteger(str[3].trim(), 10).toString(2);
+//			System.out.println("str[3]:"+str[3]);
+			String add;
+			if(str[3].charAt(0) == 'x') add = new BigInteger(str[3].substring(1).trim(), 16).toString(2);
+			else  add = new BigInteger(str[3].trim(), 10).toString(2);
 			while(add.length() < 16){
 				add = "0" + add;
 			}
