@@ -63,4 +63,3 @@ BNE $12, $13, -41 // loop 12 times
 
 SW $1, 38($0) // Store encrypted a to MEM[38]
 SW $2, 39($0) // Store encrypted b to MEM[39]
-HAL
