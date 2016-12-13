@@ -1,4 +1,4 @@
-Encrypt:
+-- Encrypt --
 ADDI $30, $0, 32
 ADDI $12, $0, 1 // init iterator
 ADDI $13, $0, 13

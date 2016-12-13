@@ -1,4 +1,4 @@
-Decrypt:
+-- Decrypt --
 ADDI $30, $0, 32
 ADDI $12, $0, 12 // init iterator
 ADDI $13, $0, 0

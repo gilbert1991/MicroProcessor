@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.math.BigInteger;
+import java.lang.*;
 
 public class Compiler {
 	public static void main(String[] args) {
@@ -9,6 +10,8 @@ public class Compiler {
 
 		List<String> instructions = readFile(inPath);
 		List<String> hexInstruction = convertAssembly(instructions);
+
+		System.out.println(hexInstruction.size());
 		writeFile(hexInstruction, outPath);
 	}
 
@@ -48,11 +51,18 @@ public class Compiler {
 	public static List<String> convertAssembly(List<String> instructions) {
 		List<String> rst = new ArrayList<>();
 		for(String instruction : instructions){
+			System.out.println(instruction);
 			if (instruction.isEmpty() || instruction.charAt(0) == '-') {
 				continue;
 			}
 
-			String[]str = instruction.split(" ");
+			if (instruction.equals("HAL")) {
+				rst.add("x\"fc000000\"");
+				continue;
+			}
+
+			String[] str = instruction.split(" ");
+			str = Arrays.copyOfRange(str, 0, 4);
 			String result = "";
 			String type = "";
 			String funct = "";
@@ -142,6 +152,8 @@ public class Compiler {
 
 			result = binToHex(result);
 
+			System.out.println(result);
+
 			rst.add(result);
 		}
 
@@ -152,8 +164,8 @@ public class Compiler {
 	public static String[] preProcess(String[] str) {
 		//delete ",","$","(",")" in the str
 		for(int k = 1; k < str.length; k++){
-			char[]chs = str[k].toCharArray();
-			char[]newchs = new char[chs.length];
+			char[] chs = str[k].toCharArray();
+			char[] newchs = new char[chs.length];
 			int j = 0;
 			for(int i = 0; i < chs.length; i++){
 				if(chs[i] == ',' || chs[i] == '$' || chs[i] == '(' || chs[i] == ')') continue;
@@ -209,7 +221,6 @@ public class Compiler {
 	}
 
 	public static String convertIType(String[] str, String result) {
-		System.out.println(Arrays.toString(str));
 		//5bit Rs
 		String rs = str[2];
 		rs = new BigInteger(rs.trim(), 10).toString(2);
@@ -229,14 +240,26 @@ public class Compiler {
 			add = new BigInteger(str[3].substring(1).trim(), 16).toString(2);
 		}
 		else {
-			add = new BigInteger(str[3].trim(), 10).toString(2);
+			// System.out.println(str[3]);
+			add = String.format("%16s", Integer.toBinaryString(Integer.parseInt(str[3].trim()))).replace(' ', '0');
+			// System.out.println(add);
+			// System.out.println(binToHex(add));
+			// if(str[3].trim().charAt(0) == '-') {
+			// 	add = Integer.parseInt(str[3].trim()).abs().not().add(BigInteger.ONE).replace("-", 1);
+			// } else {
+			// 	add = new BigInteger(str[3].trim(), 10).toString(2);
+			// }
 		}
 
 		while(add.length() < 16){
 			add = "0" + add;
 		}
 
+		System.out.println(add.length());
+
 		result += rs + rt + add;
+
+		System.out.println(result.length());
 
 		return result;
 	}
@@ -276,7 +299,7 @@ public class Compiler {
 		// System.out.println(binary);
 		String hex = "";
 		
-		for(int i = 0; i < 8; i++){
+		for(int i = 0; i < binary.length() / 4; i++){
 			int j = i*4;
 			hex += new BigInteger(binary.substring(j,j+4), 2).toString(16);
 		}
