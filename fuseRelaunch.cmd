@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/jharvard/ahd/FinalProject/SingleCycleCPU_isim_beh.exe" -prj "/home/jharvard/ahd/FinalProject/SingleCycleCPU_beh.prj" "work.SingleCycleCPU" 
