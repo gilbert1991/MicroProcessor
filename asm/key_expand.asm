@@ -34,7 +34,7 @@ OR $2, $2, $5 // left rotate l[i]+a+b by a+b bits
 SW $2, 26($12) // store l[j]
 ADD $4, $0, $2 // set b
 ADDI $11, $11, 1
-BLT $11, $28, 1
+BLT $28, $11, 1
 SUB $11, $11, $28
 ADDI $12, $12, 1
 ANDI $12, $12, 3
