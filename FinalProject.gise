@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FinalProject.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="IO_SingleCycleCPU_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SingleCycleCPU_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SingleCycleCPU_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SingleCycleCPU_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1481617018" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481617018">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="ALUControl.vhd"/>
+      <outfile xil_pn:name="ALUControl_TB.vhd"/>
+      <outfile xil_pn:name="ALU_TB.vhd"/>
+      <outfile xil_pn:name="BinaryMUX.vhd"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="ControlUnit_TB.vhd"/>
+      <outfile xil_pn:name="DataMemory.vhd"/>
+      <outfile xil_pn:name="DataMemory_TB.vhd"/>
+      <outfile xil_pn:name="GPR_TB.vhd"/>
+      <outfile xil_pn:name="GPRegisters.vhd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="InstrMemory.vhd"/>
+      <outfile xil_pn:name="Program_Counter.vhd"/>
+      <outfile xil_pn:name="Program_Counter_TB.vhd"/>
+      <outfile xil_pn:name="SSeg_Display.vhd"/>
+      <outfile xil_pn:name="Sign_Extension.vhd"/>
+      <outfile xil_pn:name="SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="SingleCycle_PKG.vhd"/>
+      <outfile xil_pn:name="segments.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1481613801" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1863731309702076285" xil_pn:start_ts="1481613801">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481613801" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7322863467336435931" xil_pn:start_ts="1481613801">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481613801" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5796794353228439992" xil_pn:start_ts="1481613801">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481617018" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481617018">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="ALUControl.vhd"/>
+      <outfile xil_pn:name="ALUControl_TB.vhd"/>
+      <outfile xil_pn:name="ALU_TB.vhd"/>
+      <outfile xil_pn:name="BinaryMUX.vhd"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="ControlUnit_TB.vhd"/>
+      <outfile xil_pn:name="DataMemory.vhd"/>
+      <outfile xil_pn:name="DataMemory_TB.vhd"/>
+      <outfile xil_pn:name="GPR_TB.vhd"/>
+      <outfile xil_pn:name="GPRegisters.vhd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="InstrMemory.vhd"/>
+      <outfile xil_pn:name="Program_Counter.vhd"/>
+      <outfile xil_pn:name="Program_Counter_TB.vhd"/>
+      <outfile xil_pn:name="SSeg_Display.vhd"/>
+      <outfile xil_pn:name="Sign_Extension.vhd"/>
+      <outfile xil_pn:name="SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="SingleCycle_PKG.vhd"/>
+      <outfile xil_pn:name="segments.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1481617020" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1695143770865817885" xil_pn:start_ts="1481617018">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="SingleCycleCPU_beh.prj"/>
+      <outfile xil_pn:name="SingleCycleCPU_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1481617020" xil_pn:in_ck="-6058863151149484983" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3324871810964361354" xil_pn:start_ts="1481617020">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="SingleCycleCPU_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
+
+</generated_project>

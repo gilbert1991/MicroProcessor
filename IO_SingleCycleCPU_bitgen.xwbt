@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.ncd
+OUTFILE=/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/jharvard/ahd/FinalProject
+LICENSE=WebPack
+USER_INFO=211233803_0_0_017
