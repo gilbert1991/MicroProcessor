@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FinalProject.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="IO_SingleCycleCPU.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="IO_SingleCycleCPU.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="IO_SingleCycleCPU.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="IO_SingleCycleCPU.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="IO_SingleCycleCPU.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="IO_SingleCycleCPU.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="IO_SingleCycleCPU.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="IO_SingleCycleCPU.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="IO_SingleCycleCPU.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="IO_SingleCycleCPU.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="IO_SingleCycleCPU.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="IO_SingleCycleCPU.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="IO_SingleCycleCPU.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="IO_SingleCycleCPU.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="IO_SingleCycleCPU.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="IO_SingleCycleCPU.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="IO_SingleCycleCPU.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="IO_SingleCycleCPU.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="IO_SingleCycleCPU.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="IO_SingleCycleCPU.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="IO_SingleCycleCPU.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="IO_SingleCycleCPU.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="IO_SingleCycleCPU.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="IO_SingleCycleCPU_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="IO_SingleCycleCPU_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="IO_SingleCycleCPU_isim_beh.exe"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="IO_SingleCycleCPU_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="IO_SingleCycleCPU_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="IO_SingleCycleCPU_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="IO_SingleCycleCPU_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="IO_SingleCycleCPU_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="IO_SingleCycleCPU_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="IO_SingleCycleCPU_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="IO_SingleCycleCPU_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="IO_SingleCycleCPU_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="IO_SingleCycleCPU_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="IO_SingleCycleCPU_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="IO_SingleCycleCPU_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="IO_SingleCycleCPU_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SingleCycleCPU_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SingleCycleCPU_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SingleCycleCPU_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1481663208" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1481663208">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="ALUControl.vhd"/>
+      <outfile xil_pn:name="ALUControl_TB.vhd"/>
+      <outfile xil_pn:name="ALU_TB.vhd"/>
+      <outfile xil_pn:name="BinaryMUX.vhd"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="ControlUnit_TB.vhd"/>
+      <outfile xil_pn:name="DataMemory.vhd"/>
+      <outfile xil_pn:name="DataMemory_TB.vhd"/>
+      <outfile xil_pn:name="GPR_TB.vhd"/>
+      <outfile xil_pn:name="GPRegisters.vhd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="InstrMemory.vhd"/>
+      <outfile xil_pn:name="Program_Counter.vhd"/>
+      <outfile xil_pn:name="Program_Counter_TB.vhd"/>
+      <outfile xil_pn:name="SSeg_Display.vhd"/>
+      <outfile xil_pn:name="Sign_Extension.vhd"/>
+      <outfile xil_pn:name="SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="SingleCycle_PKG.vhd"/>
+      <outfile xil_pn:name="segments.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1481624118" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1863731309702076285" xil_pn:start_ts="1481624118">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481624118" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7322863467336435931" xil_pn:start_ts="1481624118">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481613801" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5796794353228439992" xil_pn:start_ts="1481613801">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663208" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1481663208">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="ALUControl.vhd"/>
+      <outfile xil_pn:name="ALUControl_TB.vhd"/>
+      <outfile xil_pn:name="ALU_TB.vhd"/>
+      <outfile xil_pn:name="BinaryMUX.vhd"/>
+      <outfile xil_pn:name="ControlUnit.vhd"/>
+      <outfile xil_pn:name="ControlUnit_TB.vhd"/>
+      <outfile xil_pn:name="DataMemory.vhd"/>
+      <outfile xil_pn:name="DataMemory_TB.vhd"/>
+      <outfile xil_pn:name="GPR_TB.vhd"/>
+      <outfile xil_pn:name="GPRegisters.vhd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="InstrMemory.vhd"/>
+      <outfile xil_pn:name="Program_Counter.vhd"/>
+      <outfile xil_pn:name="Program_Counter_TB.vhd"/>
+      <outfile xil_pn:name="SSeg_Display.vhd"/>
+      <outfile xil_pn:name="Sign_Extension.vhd"/>
+      <outfile xil_pn:name="SingleCycleCPU.vhd"/>
+      <outfile xil_pn:name="SingleCycle_PKG.vhd"/>
+      <outfile xil_pn:name="segments.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663210" xil_pn:in_ck="-4066752503377448970" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1695143770865817885" xil_pn:start_ts="1481663208">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SingleCycleCPU_beh.prj"/>
+      <outfile xil_pn:name="SingleCycleCPU_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663210" xil_pn:in_ck="-3419500582707651767" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3324871810964361354" xil_pn:start_ts="1481663210">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="SingleCycleCPU_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8819008703093880850" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5796794353228439992" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="1318761660391329780" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481618134" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="2185335061079722242" xil_pn:start_ts="1481618134">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663665" xil_pn:in_ck="742564603882792479" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5421106143831065599" xil_pn:start_ts="1481663634">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.lso"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ngc"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ngr"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.prj"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.stx"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.syr"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.xst"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663665" xil_pn:in_ck="8727754723594036668" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-613988648469400151" xil_pn:start_ts="1481663665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663680" xil_pn:in_ck="3951482152013428243" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-5559034647520265421" xil_pn:start_ts="1481663665">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.bld"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ngd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1481663896" xil_pn:in_ck="-171371079928156012" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-7188367874928765557" xil_pn:start_ts="1481663680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.pcf"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_map.map"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_map.mrp"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_map.ncd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_map.ngm"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_map.xrpt"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_summary.xml"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1481665970" xil_pn:in_ck="-3008953443948961235" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1481663896">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ncd"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.pad"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.par"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ptwx"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.unroutes"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.xpi"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_pad.csv"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_pad.txt"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1481666017" xil_pn:in_ck="-4001565246315188652" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1481665970">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.bgn"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.bit"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.drc"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1481665970" xil_pn:in_ck="9089677398783968784" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416183" xil_pn:start_ts="1481665899">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.twr"/>
+      <outfile xil_pn:name="IO_SingleCycleCPU.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

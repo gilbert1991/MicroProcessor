@@ -1,0 +1,17 @@
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-1 IO_SingleCycleCPU.ngc IO_SingleCycleCPU.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o IO_SingleCycleCPU_map.ncd IO_SingleCycleCPU.ngd IO_SingleCycleCPU.pcf 
+par -w -intstyle ise -ol high -mt off IO_SingleCycleCPU_map.ncd IO_SingleCycleCPU.ncd IO_SingleCycleCPU.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml IO_SingleCycleCPU.twx IO_SingleCycleCPU.ncd -o IO_SingleCycleCPU.twr IO_SingleCycleCPU.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f IO_SingleCycleCPU.ut IO_SingleCycleCPU.ncd 
+xst -intstyle ise -ifn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.xst" -ofn "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys4DDR_Master.ucf -p xc7a100t-csg324-1 IO_SingleCycleCPU.ngc IO_SingleCycleCPU.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o IO_SingleCycleCPU_map.ncd IO_SingleCycleCPU.ngd IO_SingleCycleCPU.pcf 
+par -w -intstyle ise -ol high -mt off IO_SingleCycleCPU_map.ncd IO_SingleCycleCPU.ncd IO_SingleCycleCPU.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml IO_SingleCycleCPU.twx IO_SingleCycleCPU.ncd -o IO_SingleCycleCPU.twr IO_SingleCycleCPU.pcf -ucf Nexys4DDR_Master.ucf 
+bitgen -intstyle ise -f IO_SingleCycleCPU.ut IO_SingleCycleCPU.ncd 
