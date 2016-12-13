@@ -27,18 +27,16 @@ SUBI $6, $6, 1
 BNE $6, $0, -3 // shift l[i]+a+b left by a+b bits
 ADD $6, $3, $4
 ANDI $6, $6, 31
-SHR $1, $1, 1 
+SHR $2, $2, 1 
 ADDI $6, $6, 1
 BNE $6, $30, -3 // shift l[i]+a+b right by 32-a-b bits
 OR $2, $2, $5 // left rotate l[i]+a+b by a+b bits
 SW $2, 26($12) // store l[j]
-
 ADD $4, $0, $2 // set b
 ADDI $11, $11, 1
 BLT $11, $28, 1
 SUB $11, $11, $28
 ADDI $12, $12, 1
 ANDI $12, $12, 3
-
 ADD $27, $0, 1
 BNE $27, $29, -37
