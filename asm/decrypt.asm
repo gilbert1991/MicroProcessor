@@ -10,13 +10,13 @@ SUB $2, $2, $10
 ADD $3, $0, $2
 ADD $4, $0, $1
 ANDI $4, $4, 31
-BEQ $1, $0, 3
+BEQ $4, $0, 3
 SHR $3, $3, 1 
 SUBI $4, $4, 1
 BNE $4, $0, -3 // shift b-s[index*2+1] right by a bits
 ADD $4, $0, $1
 ANDI $4, $4, 31
-BEQ $1, $0, 3
+BEQ $4, $30, 3
 SHL $2, $2, 1 
 ADDI $4, $4, 1
 BNE $4, $30, -3 // shift b-s[index*2+1] left by 32-a bits
@@ -30,13 +30,13 @@ SUB $1, $1, $9
 ADD $3, $0, $1
 ADD $4, $0, $2
 ANDI $4, $4, 31
-BEQ $2, $0, 3
+BEQ $4, $0, 3
 SHR $3, $3, 1 
 SUBI $4, $4, 1
 BNE $4, $0, -3 // shift a-s[index*2] right by b bits
 ADD $4, $0, $2
 ANDI $4, $4, 31
-BEQ $2, $0, 3
+BEQ $4, $30, 3
 SHL $1, $1, 1 
 ADDI $4, $4, 1
 BNE $4, $30, -3 // shift a-s[index*2] left by 32-b bits
