@@ -52,6 +52,6 @@ LW $9, 0($0) // load s[0]
 LW $10, 1($0) // load s[1]
 SUB $1, $1, $9
 SUB $2, $2, $10
-SW $1, 38($0) // Store decrypted a to MEM[40]
-SW $2, 39($0) // Store decrypted b to MEM[41]
+SW $1, 40($0) // Store decrypted a to MEM[40]
+SW $2, 41($0) // Store decrypted b to MEM[41]
 HAL
