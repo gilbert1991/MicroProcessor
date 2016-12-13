@@ -54,6 +54,7 @@ component SingleCycleCPU is
 			 );
 end component;
 
+signal s_clock : std_logic := '0';
 signal fake_clock : STD_LOGIC;
 signal sel_Addr : STD_LOGIC_VECTOR (7 downto 0);
 signal DMem_out : STD_LOGIC_VECTOR (31 downto 0);
@@ -81,10 +82,30 @@ begin
 SSeg_Disp: SSeg_Display port map(clkin, btnd_clr,Disp_bits,an,sseg);
 SingleCycleProcessor: SingleCycleCPU port map(fake_clock, btnd_Clr, sel_Addr, DMem_out, IMem_out, GPR_out, PC_current);
 
+	slow_clock: process(btnd_clr,clkin) 
+	begin
+		if (rising_edge(clkin)) then		-- The s_clock period is 2 times clkin
+			s_clock <= not s_clock;
+		end if;
+--		if (btnd_clr = '1') then
+--			clock_counter <= "00";
+--		elsif (rising_edge(clkin)) then
+--			if (clock_counter = "00") then
+--				s_clock <= not s_clock;
+--			end if;
+--			
+--			if (clock_counter = "01") then		-- clock period is 2 times clkin.
+--				clock_counter <= "00";
+--			else
+--				clock_counter <= clock_counter + 1;
+--			end if;
+--		end if;
+	end process;
+
 
 	with sw(15) select
 		fake_clock <= btnl when '0',
-						clkin when others;
+						s_clock when others;
 	
 	sel_Addr <= sw(7 downto 0);
 	

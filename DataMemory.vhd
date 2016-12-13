@@ -45,7 +45,9 @@ entity DataMemory is
 end DataMemory;
 
 architecture Behavioral of DataMemory is
-	signal DataMem : DATA_MEMORY := (x"b7e15163", x"5618cb1c", x"f45044d5", x"9287be8e", x"30bf3847", x"cef6b200", x"6d2e2bb9", x"0b65a572", x"a99d1f2b", x"47d498e4", x"e60c129d", x"84438c56", x"227b060f", x"c0b27fc8", x"5ee9f981", x"fd21733a", x"9b58ecf3", x"399066ac", x"d7c7e065", x"75ff5a1e", x"1436d3d7", x"b26e4d90", x"50a5c749", x"eedd4102", x"8d14babb", x"2b4c3474", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"B7E15163", x"9E3779B9", x"00000000", x"00000000", others => x"00000000");	-- Initialization
+	constant init_DMem : DATA_MEMORY := (x"b7e15163", x"5618cb1c", x"f45044d5", x"9287be8e", x"30bf3847", x"cef6b200", x"6d2e2bb9", x"0b65a572", x"a99d1f2b", x"47d498e4", x"e60c129d", x"84438c56", x"227b060f", x"c0b27fc8", x"5ee9f981", x"fd21733a", x"9b58ecf3", x"399066ac", x"d7c7e065", x"75ff5a1e", x"1436d3d7", x"b26e4d90", x"50a5c749", x"eedd4102", x"8d14babb", x"2b4c3474", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"B7E15163", x"9E3779B9", x"00000000", x"00000000", others => x"00000000");	-- Initialization
+	
+	signal DataMem : DATA_MEMORY;
 	
 begin
 	DMem_out <= DataMem(conv_integer(sel_Addr));
@@ -55,7 +57,7 @@ begin
 	Process(clock, clear)
 	begin
 		if (clear = '1') then
-			DataMem <= (others => x"00000000");
+			DataMem <= init_DMem;
 		elsif (rising_edge(clock)) then
 			if (MemWrite = '1') then		-- Let's hope MemWrite control Signal have longer delay.
 				DataMem(conv_integer(Address)) <= DatatoWrite;

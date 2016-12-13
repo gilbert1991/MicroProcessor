@@ -1,0 +1,936 @@
+Release 14.7 - xst P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: IO_SingleCycleCPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IO_SingleCycleCPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IO_SingleCycleCPU"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : IO_SingleCycleCPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/SingleCycle_PKG.vhd" into library work
+Parsing package <SingleCycle_PKG>.
+Parsing package body <SingleCycle_PKG>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/BinaryMUX.vhd" into library work
+Parsing entity <BinaryMUX>.
+Parsing architecture <Behavioral> of entity <binarymux>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/Sign_Extension.vhd" into library work
+Parsing entity <Sign_Extension>.
+Parsing architecture <Behavioral> of entity <sign_extension>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/segments.vhd" into library work
+Parsing entity <segments>.
+Parsing architecture <Behavioral> of entity <segments>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/Program_Counter.vhd" into library work
+Parsing entity <Program_Counter>.
+Parsing architecture <Behavioral> of entity <program_counter>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/InstrMemory.vhd" into library work
+Parsing entity <InstrMemory>.
+Parsing architecture <Behavioral> of entity <instrmemory>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/GPRegisters.vhd" into library work
+Parsing entity <GPRegisters>.
+Parsing architecture <Behavioral> of entity <gpregisters>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/DataMemory.vhd" into library work
+Parsing entity <DataMemory>.
+Parsing architecture <Behavioral> of entity <datamemory>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/ControlUnit.vhd" into library work
+Parsing entity <ControlUnit>.
+Parsing architecture <Behavioral> of entity <controlunit>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/ALUControl.vhd" into library work
+Parsing entity <ALUControl>.
+Parsing architecture <Behavioral> of entity <alucontrol>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <Behavioral> of entity <alu>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/SSeg_Display.vhd" into library work
+Parsing entity <SSeg_Display>.
+Parsing architecture <Behavioral> of entity <sseg_display>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/SingleCycleCPU.vhd" into library work
+Parsing entity <SingleCycleCPU>.
+Parsing architecture <Behavioral> of entity <singlecyclecpu>.
+Parsing VHDL file "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.vhd" into library work
+Parsing entity <IO_SingleCycleCPU>.
+Parsing architecture <Behavioral> of entity <io_singlecyclecpu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <IO_SingleCycleCPU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SSeg_Display> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <segments> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SingleCycleCPU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <InstrMemory> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Sign_Extension> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Program_Counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <BinaryMUX> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DataMemory> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <GPRegisters> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ControlUnit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "/home/jharvard/ahd/FinalProject/ALU.vhd" Line 76: data1 should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "/home/jharvard/ahd/FinalProject/ALU.vhd" Line 80: data1 should be on the sensitivity list of the process
+
+Elaborating entity <ALUControl> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <IO_SingleCycleCPU>.
+    Related source file is "/home/jharvard/ahd/FinalProject/IO_SingleCycleCPU.vhd".
+    Found 1-bit register for signal <s_clock>.
+    Found 32-bit 8-to-1 multiplexer for signal <Disp_bits> created at line 112.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <IO_SingleCycleCPU> synthesized.
+
+Synthesizing Unit <SSeg_Display>.
+    Related source file is "/home/jharvard/ahd/FinalProject/SSeg_Display.vhd".
+    Found 12-bit register for signal <counterforDisplay>.
+    Found 8-bit register for signal <an>.
+    Found 4-bit register for signal <value>.
+    Found 7-bit register for signal <sseg>.
+    Found 12-bit adder for signal <counterforDisplay[11]_GND_6_o_add_22_OUT> created at line 106.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred  37 Multiplexer(s).
+Unit <SSeg_Display> synthesized.
+
+Synthesizing Unit <segments>.
+    Related source file is "/home/jharvard/ahd/FinalProject/segments.vhd".
+    Found 16x7-bit Read Only RAM for signal <segs>
+    Summary:
+	inferred   1 RAM(s).
+Unit <segments> synthesized.
+
+Synthesizing Unit <SingleCycleCPU>.
+    Related source file is "/home/jharvard/ahd/FinalProject/SingleCycleCPU.vhd".
+    Summary:
+	no macro.
+Unit <SingleCycleCPU> synthesized.
+
+Synthesizing Unit <InstrMemory>.
+    Related source file is "/home/jharvard/ahd/FinalProject/InstrMemory.vhd".
+WARNING:Xst:2999 - Signal 'InstrMem', unconnected in block 'InstrMemory', is tied to its initial value.
+    Found 256x32-bit dual-port Read Only RAM <Mram_InstrMem> for signal <InstrMem>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <InstrMemory> synthesized.
+
+Synthesizing Unit <Sign_Extension>.
+    Related source file is "/home/jharvard/ahd/FinalProject/Sign_Extension.vhd".
+    Summary:
+	no macro.
+Unit <Sign_Extension> synthesized.
+
+Synthesizing Unit <Program_Counter>.
+    Related source file is "/home/jharvard/ahd/FinalProject/Program_Counter.vhd".
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <PC_plus1> created at line 60.
+    Found 32-bit adder for signal <Branch_PC> created at line 66.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <Program_Counter> synthesized.
+
+Synthesizing Unit <BinaryMUX>.
+    Related source file is "/home/jharvard/ahd/FinalProject/BinaryMUX.vhd".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <BinaryMUX> synthesized.
+
+Synthesizing Unit <DataMemory>.
+    Related source file is "/home/jharvard/ahd/FinalProject/DataMemory.vhd".
+    Found 32-bit register for signal <DataMem<1>>.
+    Found 32-bit register for signal <DataMem<2>>.
+    Found 32-bit register for signal <DataMem<3>>.
+    Found 32-bit register for signal <DataMem<4>>.
+    Found 32-bit register for signal <DataMem<5>>.
+    Found 32-bit register for signal <DataMem<6>>.
+    Found 32-bit register for signal <DataMem<7>>.
+    Found 32-bit register for signal <DataMem<8>>.
+    Found 32-bit register for signal <DataMem<9>>.
+    Found 32-bit register for signal <DataMem<10>>.
+    Found 32-bit register for signal <DataMem<11>>.
+    Found 32-bit register for signal <DataMem<12>>.
+    Found 32-bit register for signal <DataMem<13>>.
+    Found 32-bit register for signal <DataMem<14>>.
+    Found 32-bit register for signal <DataMem<15>>.
+    Found 32-bit register for signal <DataMem<16>>.
+    Found 32-bit register for signal <DataMem<17>>.
+    Found 32-bit register for signal <DataMem<18>>.
+    Found 32-bit register for signal <DataMem<19>>.
+    Found 32-bit register for signal <DataMem<20>>.
+    Found 32-bit register for signal <DataMem<21>>.
+    Found 32-bit register for signal <DataMem<22>>.
+    Found 32-bit register for signal <DataMem<23>>.
+    Found 32-bit register for signal <DataMem<24>>.
+    Found 32-bit register for signal <DataMem<25>>.
+    Found 32-bit register for signal <DataMem<26>>.
+    Found 32-bit register for signal <DataMem<27>>.
+    Found 32-bit register for signal <DataMem<28>>.
+    Found 32-bit register for signal <DataMem<29>>.
+    Found 32-bit register for signal <DataMem<30>>.
+    Found 32-bit register for signal <DataMem<31>>.
+    Found 32-bit register for signal <DataMem<32>>.
+    Found 32-bit register for signal <DataMem<33>>.
+    Found 32-bit register for signal <DataMem<36>>.
+    Found 32-bit register for signal <DataMem<37>>.
+    Found 32-bit register for signal <DataMem<38>>.
+    Found 32-bit register for signal <DataMem<39>>.
+    Found 32-bit register for signal <DataMem<40>>.
+    Found 32-bit register for signal <DataMem<41>>.
+    Found 32-bit register for signal <DataMem<42>>.
+    Found 32-bit register for signal <DataMem<43>>.
+    Found 32-bit register for signal <DataMem<44>>.
+    Found 32-bit register for signal <DataMem<45>>.
+    Found 32-bit register for signal <DataMem<46>>.
+    Found 32-bit register for signal <DataMem<47>>.
+    Found 32-bit register for signal <DataMem<48>>.
+    Found 32-bit register for signal <DataMem<49>>.
+    Found 32-bit register for signal <DataMem<50>>.
+    Found 32-bit register for signal <DataMem<51>>.
+    Found 32-bit register for signal <DataMem<52>>.
+    Found 32-bit register for signal <DataMem<53>>.
+    Found 32-bit register for signal <DataMem<54>>.
+    Found 32-bit register for signal <DataMem<55>>.
+    Found 32-bit register for signal <DataMem<56>>.
+    Found 32-bit register for signal <DataMem<57>>.
+    Found 32-bit register for signal <DataMem<58>>.
+    Found 32-bit register for signal <DataMem<59>>.
+    Found 32-bit register for signal <DataMem<60>>.
+    Found 32-bit register for signal <DataMem<61>>.
+    Found 32-bit register for signal <DataMem<62>>.
+    Found 32-bit register for signal <DataMem<63>>.
+    Found 32-bit register for signal <DataMem<34>>.
+    Found 32-bit register for signal <DataMem<0>>.
+    Found 32-bit register for signal <DataMem<35>>.
+INFO:Xst:3019 - HDL ADVISOR - 2048 flip-flops were inferred for signal <DataMem>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 32-bit 64-to-1 multiplexer for signal <DMem_out> created at line 53.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<31>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<30>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<29>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<28>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<27>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<26>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<25>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<24>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<23>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<22>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<21>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<20>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<19>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<18>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<17>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<16>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<15>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<14>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<13>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<12>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<11>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<10>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<9>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<8>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<7>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<6>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<5>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<4>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<3>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<2>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<1>> created at line 55.
+    Found 1-bit 64-to-1 multiplexer for signal <Address[5]_DataMem[63][31]_wide_mux_1_OUT<0>> created at line 55.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<27>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<26>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<25>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<24>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<23>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<22>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<21>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<20>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<19>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<18>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<17>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<16>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <MemData<31>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred 2048 D-type flip-flop(s).
+	inferred  32 Latch(s).
+	inferred  33 Multiplexer(s).
+Unit <DataMemory> synthesized.
+
+Synthesizing Unit <GPRegisters>.
+    Related source file is "/home/jharvard/ahd/FinalProject/GPRegisters.vhd".
+    Found 32-bit register for signal <GPR<1>>.
+    Found 32-bit register for signal <GPR<2>>.
+    Found 32-bit register for signal <GPR<3>>.
+    Found 32-bit register for signal <GPR<4>>.
+    Found 32-bit register for signal <GPR<5>>.
+    Found 32-bit register for signal <GPR<6>>.
+    Found 32-bit register for signal <GPR<7>>.
+    Found 32-bit register for signal <GPR<8>>.
+    Found 32-bit register for signal <GPR<9>>.
+    Found 32-bit register for signal <GPR<10>>.
+    Found 32-bit register for signal <GPR<11>>.
+    Found 32-bit register for signal <GPR<12>>.
+    Found 32-bit register for signal <GPR<13>>.
+    Found 32-bit register for signal <GPR<14>>.
+    Found 32-bit register for signal <GPR<15>>.
+    Found 32-bit register for signal <GPR<16>>.
+    Found 32-bit register for signal <GPR<17>>.
+    Found 32-bit register for signal <GPR<18>>.
+    Found 32-bit register for signal <GPR<19>>.
+    Found 32-bit register for signal <GPR<20>>.
+    Found 32-bit register for signal <GPR<21>>.
+    Found 32-bit register for signal <GPR<22>>.
+    Found 32-bit register for signal <GPR<23>>.
+    Found 32-bit register for signal <GPR<24>>.
+    Found 32-bit register for signal <GPR<25>>.
+    Found 32-bit register for signal <GPR<26>>.
+    Found 32-bit register for signal <GPR<27>>.
+    Found 32-bit register for signal <GPR<28>>.
+    Found 32-bit register for signal <GPR<29>>.
+    Found 32-bit register for signal <GPR<30>>.
+    Found 32-bit register for signal <GPR<31>>.
+    Found 32-bit register for signal <GPR<0>>.
+INFO:Xst:3019 - HDL ADVISOR - 1024 flip-flops were inferred for signal <GPR>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 1024 flip-flops were inferred for signal <GPR>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 1024 flip-flops were inferred for signal <GPR>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 32-bit 32-to-1 multiplexer for signal <GPR_out> created at line 58.
+    Found 32-bit 32-to-1 multiplexer for signal <GPR_Rs> created at line 68.
+    Found 32-bit 32-to-1 multiplexer for signal <GPR_Rt> created at line 69.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <GPRegisters> synthesized.
+
+Synthesizing Unit <ControlUnit>.
+    Related source file is "/home/jharvard/ahd/FinalProject/ControlUnit.vhd".
+    Found 16x1-bit Read Only RAM for signal <Branch>
+    Found 6-bit comparator lessequal for signal <GND_49_o_opcode[5]_LessThan_14_o> created at line 85
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <ControlUnit> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/jharvard/ahd/FinalProject/ALU.vhd".
+    Found 32-bit adder for signal <A[31]_B[31]_add_3_OUT> created at line 61.
+    Found 32-bit subtractor for signal <GND_51_o_GND_51_o_sub_5_OUT<31:0>> created at line 64.
+    Found 32-bit shifter logical left for signal <data1[31]_shiftAmount[4]_shift_left_9_OUT> created at line 76
+    Found 32-bit shifter logical right for signal <data1[31]_shiftAmount[4]_shift_right_10_OUT> created at line 80
+    Found 32-bit comparator greater for signal <A[31]_B[31]_LessThan_12_o> created at line 84
+    Found 32-bit comparator equal for signal <A[31]_B[31]_equal_14_o> created at line 98
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  15 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <ALUControl>.
+    Related source file is "/home/jharvard/ahd/FinalProject/ALUControl.vhd".
+    Found 32x4-bit Read Only RAM for signal <_n0019>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplexer(s).
+Unit <ALUControl> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x1-bit single-port Read Only RAM                    : 1
+ 16x7-bit single-port Read Only RAM                    : 1
+ 256x32-bit dual-port Read Only RAM                    : 1
+ 32x4-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 4
+ 12-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Registers                                            : 102
+ 1-bit register                                        : 1
+ 12-bit register                                       : 1
+ 32-bit register                                       : 97
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 1
+# Latches                                              : 32
+ 1-bit latch                                           : 32
+# Comparators                                          : 3
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 96
+ 1-bit 2-to-1 multiplexer                              : 35
+ 1-bit 64-to-1 multiplexer                             : 32
+ 12-bit 2-to-1 multiplexer                             : 1
+ 32-bit 2-to-1 multiplexer                             : 11
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 64-to-1 multiplexer                            : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ALUControl>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0019> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Funct<4:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ALUControl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ControlUnit>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_Branch> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <opcode<3:0>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <Branch>        |          |
+    -----------------------------------------------------------------------
+Unit <ControlUnit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <InstrMemory>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_InstrMem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sel_Addr>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weB            | connected to signal <GND>           | high     |
+    |     addrB          | connected to signal <PC>            |          |
+    |     diB            | connected to signal <GND>           |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstrMemory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SSeg_Display>.
+The following registers are absorbed into counter <counterforDisplay>: 1 register on signal <counterforDisplay>.
+Unit <SSeg_Display> synthesized (advanced).
+
+Synthesizing (advanced) Unit <segments>.
+INFO:Xst:3231 - The small RAM <Mram_segs> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <value>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segs>          |          |
+    -----------------------------------------------------------------------
+Unit <segments> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x1-bit single-port distributed Read Only RAM        : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 256x32-bit dual-port distributed Read Only RAM        : 1
+ 32x4-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit addsub                                         : 1
+# Counters                                             : 1
+ 12-bit up counter                                     : 1
+# Registers                                            : 3124
+ Flip-Flops                                            : 3124
+# Comparators                                          : 3
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 1
+ 6-bit comparator lessequal                            : 1
+# Multiplexers                                         : 125
+ 1-bit 2-to-1 multiplexer                              : 34
+ 1-bit 64-to-1 multiplexer                             : 64
+ 32-bit 2-to-1 multiplexer                             : 11
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <IO_SingleCycleCPU> ...
+
+Optimizing unit <SSeg_Display> ...
+
+Optimizing unit <SingleCycleCPU> ...
+
+Optimizing unit <Program_Counter> ...
+
+Optimizing unit <DataMemory> ...
+
+Optimizing unit <GPRegisters> ...
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IO_SingleCycleCPU, actual ratio is 8.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3136
+ Flip-Flops                                            : 3136
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : IO_SingleCycleCPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5634
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 42
+#      LUT2                        : 38
+#      LUT3                        : 81
+#      LUT4                        : 68
+#      LUT5                        : 205
+#      LUT6                        : 4825
+#      MUXCY                       : 131
+#      MUXF7                       : 131
+#      VCC                         : 1
+#      XORCY                       : 108
+# FlipFlops/Latches                : 3168
+#      FD                          : 1
+#      FDC                         : 12
+#      FDCE                        : 2652
+#      FDE                         : 19
+#      FDPE                        : 452
+#      LD                          : 32
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 18
+#      OBUF                        : 17
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3168  out of  126800     2%  
+ Number of Slice LUTs:                 5262  out of  63400     8%  
+    Number used as Logic:              5262  out of  63400     8%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5915
+   Number with an unused Flip Flop:    2747  out of   5915    46%  
+   Number with an unused LUT:           653  out of   5915    11%  
+   Number of fully used LUT-FF pairs:  2515  out of   5915    42%  
+   Number of unique control sets:        42
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    210    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                4  out of     32    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                                                 | Clock buffer(FF name)                            | Load  |
+-------------------------------------------------------------+--------------------------------------------------+-------+
+clkin                                                        | BUFGP                                            | 32    |
+fake_clock(Mmux_fake_clock11:O)                              | BUFG(*)(SingleCycleProcessor/PC_Update/PC_31)    | 3104  |
+SingleCycleProcessor/MemRead(SingleCycleProcessor/MemRead1:O)| BUFG(*)(SingleCycleProcessor/Data_Mem/MemData_31)| 32    |
+-------------------------------------------------------------+--------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 8.952ns (Maximum Frequency: 111.711MHz)
+   Minimum input arrival time before clock: 7.184ns
+   Maximum output required time after clock: 0.962ns
+   Maximum combinational path delay: 0.554ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkin'
+  Clock period: 4.090ns (frequency: 244.499MHz)
+  Total number of paths / destination ports: 653 / 51
+-------------------------------------------------------------------------
+Delay:               4.090ns (Levels of Logic = 4)
+  Source:            SSeg_Disp/an_5 (FF)
+  Destination:       SSeg_Disp/value_0 (FF)
+  Source Clock:      clkin rising
+  Destination Clock: clkin rising
+
+  Data Path: SSeg_Disp/an_5 to SSeg_Disp/value_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.478   0.595  SSeg_Disp/an_5 (SSeg_Disp/an_5)
+     LUT2:I0->O            1   0.124   0.939  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT318 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT317)
+     LUT6:I0->O            1   0.124   0.776  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT321 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT320)
+     LUT6:I2->O            1   0.124   0.776  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT327 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT326)
+     LUT6:I2->O            1   0.124   0.000  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT328 (SSeg_Disp/value[3]_Disp_bits[11]_mux_10_OUT<0>)
+     FDE:D                     0.030          SSeg_Disp/value_0
+    ----------------------------------------
+    Total                      4.090ns (1.004ns logic, 3.086ns route)
+                                       (24.5% logic, 75.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fake_clock'
+  Clock period: 8.952ns (frequency: 111.711MHz)
+  Total number of paths / destination ports: 355546991 / 6208
+-------------------------------------------------------------------------
+Delay:               8.952ns (Levels of Logic = 10)
+  Source:            SingleCycleProcessor/PC_Update/PC_4 (FF)
+  Destination:       SingleCycleProcessor/Data_Mem/DataMem_35_31 (FF)
+  Source Clock:      fake_clock rising
+  Destination Clock: fake_clock rising
+
+  Data Path: SingleCycleProcessor/PC_Update/PC_4 to SingleCycleProcessor/Data_Mem/DataMem_35_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            78   0.478   1.102  SingleCycleProcessor/PC_Update/PC_4 (SingleCycleProcessor/PC_Update/PC_4)
+     LUT6:I0->O            1   0.124   0.716  SingleCycleProcessor_inst_LPM_MUX546_SW2 (SingleCycleProcessor_N94)
+     LUT5:I2->O          257   0.124   0.738  SingleCycleProcessor_inst_LPM_MUX546 (SingleCycleProcessor/Instruction<22>)
+     LUT6:I4->O            1   0.124   0.776  SingleCycleProcessor/RegisterOp/Mmux_GPR_Rs_840 (SingleCycleProcessor/RegisterOp/Mmux_GPR_Rs_840)
+     LUT6:I2->O            1   0.124   0.000  SingleCycleProcessor/RegisterOp/Mmux_GPR_Rs_313 (SingleCycleProcessor/RegisterOp/Mmux_GPR_Rs_313)
+     MUXF7:I1->O          17   0.368   0.882  SingleCycleProcessor/RegisterOp/Mmux_GPR_Rs_2_f7_12 (SingleCycleProcessor/GPR_Rs<21>)
+     LUT6:I2->O            5   0.124   0.743  SingleCycleProcessor/ArithLogicUnit/Sh1161 (SingleCycleProcessor/ArithLogicUnit/Sh116)
+     LUT5:I2->O            2   0.124   0.542  SingleCycleProcessor/ArithLogicUnit/Sh1481 (SingleCycleProcessor/ArithLogicUnit/Sh148)
+     LUT6:I4->O            1   0.124   0.421  SingleCycleProcessor/ArithLogicUnit/Mmux_ALUResult544 (SingleCycleProcessor/ArithLogicUnit/Mmux_ALUResult543)
+     LUT6:I5->O         2081   0.124   1.040  SingleCycleProcessor/ArithLogicUnit/Mmux_ALUResult545 (SingleCycleProcessor/ALUResult<4>)
+     LUT6:I3->O            1   0.124   0.000  SingleCycleProcessor/Data_Mem/DataMem_12_0_dpot (SingleCycleProcessor/Data_Mem/DataMem_12_0_dpot)
+     FDPE:D                    0.030          SingleCycleProcessor/Data_Mem/DataMem_12_0
+    ----------------------------------------
+    Total                      8.952ns (1.992ns logic, 6.960ns route)
+                                       (22.3% logic, 77.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkin'
+  Total number of paths / destination ports: 2767 / 23
+-------------------------------------------------------------------------
+Offset:              7.184ns (Levels of Logic = 9)
+  Source:            sw<1> (PAD)
+  Destination:       SSeg_Disp/value_3 (FF)
+  Destination Clock: clkin rising
+
+  Data Path: sw<1> to SSeg_Disp/value_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           845   0.001   1.209  sw_1_IBUF (sw_1_IBUF)
+     LUT6:I0->O            1   0.124   0.776  SingleCycleProcessor/Data_Mem/mux29_122 (SingleCycleProcessor/Data_Mem/mux29_122)
+     LUT6:I2->O            1   0.124   0.776  SingleCycleProcessor/Data_Mem/mux29_7 (SingleCycleProcessor/Data_Mem/mux29_7)
+     LUT6:I2->O            1   0.124   0.536  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT129 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT128)
+     LUT6:I4->O            1   0.124   0.776  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1210 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT129)
+     LUT6:I2->O            1   0.124   0.536  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1213 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1212)
+     LUT6:I4->O            1   0.124   0.776  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1218 (SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1217)
+     LUT4:I0->O            1   0.124   0.776  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1222_SW0 (N130)
+     LUT6:I2->O            1   0.124   0.000  SSeg_Disp/Mmux_value[3]_Disp_bits[11]_mux_10_OUT1222 (SSeg_Disp/value[3]_Disp_bits[11]_mux_10_OUT<3>)
+     FDE:D                     0.030          SSeg_Disp/value_3
+    ----------------------------------------
+    Total                      7.184ns (1.023ns logic, 6.161ns route)
+                                       (14.2% logic, 85.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkin'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              0.962ns (Levels of Logic = 1)
+  Source:            SSeg_Disp/an_2 (FF)
+  Destination:       an<2> (PAD)
+  Source Clock:      clkin rising
+
+  Data Path: SSeg_Disp/an_2 to an<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.478   0.484  SSeg_Disp/an_2 (SSeg_Disp/an_2)
+     OBUF:I->O                 0.000          an_2_OBUF (an<2>)
+    ----------------------------------------
+    Total                      0.962ns (0.478ns logic, 0.484ns route)
+                                       (49.7% logic, 50.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Delay:               0.554ns (Levels of Logic = 2)
+  Source:            sw<14> (PAD)
+  Destination:       led<1> (PAD)
+
+  Data Path: sw<14> to led<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            38   0.001   0.553  sw_14_IBUF (led_1_OBUF)
+     OBUF:I->O                 0.000          led_1_OBUF (led<1>)
+    ----------------------------------------
+    Total                      0.554ns (0.001ns logic, 0.553ns route)
+                                       (0.2% logic, 99.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock SingleCycleProcessor/MemRead
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+fake_clock     |         |         |   10.899|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkin
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkin          |    4.090|         |         |         |
+fake_clock     |    7.242|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fake_clock
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+SingleCycleProcessor/MemRead|         |    2.781|         |         |
+fake_clock                  |    8.952|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.24 secs
+ 
+--> 
+
+
+Total memory usage is 211224 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

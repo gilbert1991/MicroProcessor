@@ -16,8 +16,8 @@ Parsing VHDL file "/home/jharvard/ahd/FinalProject/ALU.vhd" into library work
 Parsing VHDL file "/home/jharvard/ahd/FinalProject/SingleCycleCPU.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 38540 KB
-Fuse CPU Usage: 1280 ms
+Fuse Memory Usage: 38688 KB
+Fuse CPU Usage: 1230 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package singlecycle_pkg
@@ -38,6 +38,6 @@ Time Resolution for simulation is 1ps.
 Waiting for 7 sub-compilation(s) to finish...
 Compiled 25 VHDL Units
 Built simulation executable /home/jharvard/ahd/FinalProject/SingleCycleCPU_isim_beh.exe
-Fuse Memory Usage: 93376 KB
-Fuse CPU Usage: 1420 ms
+Fuse Memory Usage: 93480 KB
+Fuse CPU Usage: 1380 ms
 GCC CPU Usage: 560 ms
