@@ -33,9 +33,11 @@ use work.SingleCycle_PKG.All;
 entity SingleCycleCPU is
     Port ( Clock : in  STD_LOGIC;
            Clear : in  STD_LOGIC;
-			  sel_Addr : in STD_LOGIC_VECTOR (5 downto 0);
+			  sel_Addr : in STD_LOGIC_VECTOR (7 downto 0);
 			  DMem_out : out STD_LOGIC_VECTOR (31 downto 0);
-			  GPR_out : out STD_LOGIC_VECTOR (31 downto 0)
+			  IMem_out  : out STD_LOGIC_VECTOR (31 downto 0);
+			  GPR_out : out STD_LOGIC_VECTOR (31 downto 0);
+			  PC_current: out STD_LOGIC_VECTOR (31 downto 0)
 			 );
 end SingleCycleCPU;
 
@@ -132,8 +134,9 @@ signal GPR_Rs, GPR_Rt :STD_LOGIC_VECTOR (31 downto 0);
 
 component InstrMemory is
     Port ( PC : in  STD_LOGIC_VECTOR (7 downto 0);
-           Instruction : out  STD_LOGIC_VECTOR (31 downto 0)
---			  I_Mem : out Instruction_MEMORY
+           Instruction : out  STD_LOGIC_VECTOR (31 downto 0);
+			  sel_Addr : in STD_LOGIC_VECTOR (7 downto 0);
+			  IMem_out : out STD_LOGIC_VECTOR (31 downto 0)
 			  );
 end component;
 
@@ -150,15 +153,16 @@ signal sign_extended : STD_LOGIC_VECTOR (31 downto 0);
 
 begin
 
+PC_current <= PC;
 
-InstructionFetch : InstrMemory port map (PC(7 downto 0), Instruction);
+InstructionFetch : InstrMemory port map (PC(7 downto 0), Instruction, sel_Addr, IMem_out);
 
 SignExtension : Sign_Extension port map (Instruction(15 downto 0),sign_extended);
 
 isBranch <= Branch and compResult;
 PC_Update : Program_Counter port map (clock, clear, isJump, isBranch, isHAL, Instruction(25 downto 0) ,sign_extended, PC);
 
-Data_Mem : DataMemory port map (clock, clear, ALUResult(5 downto 0), GPR_Rt, MemWrite, MemRead, MemData, sel_Addr, DMem_out);
+Data_Mem : DataMemory port map (clock, clear, ALUResult(5 downto 0), GPR_Rt, MemWrite, MemRead, MemData, sel_Addr(5 downto 0), DMem_out);
 
 RegisterOp : GPRegisters port map (Clock, Clear, Instruction(25 downto 21), Instruction(20 downto 16), Instruction(15 downto 11), RegDst, MemData, ALUResult, MemRead, RegWrite, GPR_Rs, GPR_Rt, sel_Addr(4 downto 0), GPR_out);
 
