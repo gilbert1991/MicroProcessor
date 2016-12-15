@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   23:49:27 12/11/2016
+-- Create Date:   17:24:33 12/15/2016
 -- Design Name:   
--- Module Name:   /home/jharvard/ahd/FinalProject/ControlUnit_TB.vhd
+-- Module Name:   /home/jharvard/ahd/FinalProject/FinalProject_ISE/ControlUnit_TB.vhd
 -- Project Name:  FinalProject
 -- Target Device:  
 -- Tool versions:  
@@ -46,11 +46,11 @@ ARCHITECTURE behavior OF ControlUnit_TB IS
          Branch : OUT  std_logic;
          isJump : OUT  std_logic;
          MemRead : OUT  std_logic;
---         MemtoReg : OUT  std_logic;
          MemWrite : OUT  std_logic;
          ALUOp : OUT  std_logic_vector(3 downto 0);
          ALUSrc : OUT  std_logic;
-         RegWrite : OUT  std_logic
+         RegWrite : OUT  std_logic;
+         isHAL : OUT  std_logic
         );
     END COMPONENT;
     
@@ -63,11 +63,11 @@ ARCHITECTURE behavior OF ControlUnit_TB IS
    signal Branch : std_logic;
    signal isJump : std_logic;
    signal MemRead : std_logic;
---   signal MemtoReg : std_logic;
    signal MemWrite : std_logic;
    signal ALUOp : std_logic_vector(3 downto 0);
    signal ALUSrc : std_logic;
    signal RegWrite : std_logic;
+   signal isHAL : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
@@ -81,17 +81,16 @@ BEGIN
           Branch => Branch,
           isJump => isJump,
           MemRead => MemRead,
-          MemtoReg => MemtoReg,
           MemWrite => MemWrite,
           ALUOp => ALUOp,
           ALUSrc => ALUSrc,
-          RegWrite => RegWrite
+          RegWrite => RegWrite,
+          isHAL => isHAL
         );
 
    -- Clock process definitions
  
 
-   -- Stimulus process
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.

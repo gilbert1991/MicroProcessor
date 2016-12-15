@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   21:45:59 12/11/2016
+-- Create Date:   17:35:37 12/15/2016
 -- Design Name:   
--- Module Name:   /home/jharvard/ahd/FinalProject/Program_Counter_TB.vhd
+-- Module Name:   /home/jharvard/ahd/FinalProject/FinalProject_ISE/Program_Counter_TB.vhd
 -- Project Name:  FinalProject
 -- Target Device:  
 -- Tool versions:  
@@ -45,6 +45,7 @@ ARCHITECTURE behavior OF Program_Counter_TB IS
          clear : IN  std_logic;
          isJump : IN  std_logic;
          isBranch : IN  std_logic;
+         isHAL : IN  std_logic;
          Jump_Address : IN  std_logic_vector(25 downto 0);
          sign_extended : IN  std_logic_vector(31 downto 0);
          PC : INOUT  std_logic_vector(31 downto 0)
@@ -57,10 +58,11 @@ ARCHITECTURE behavior OF Program_Counter_TB IS
    signal clear : std_logic := '0';
    signal isJump : std_logic := '0';
    signal isBranch : std_logic := '0';
-   signal Jump_Address : std_logic_vector(25 downto 0) := "11" & x"AAAAAA";
-   signal sign_extended : std_logic_vector(31 downto 0) := x"00007001";
+   signal isHAL : std_logic := '0';
+   signal Jump_Address : std_logic_vector(25 downto 0) := "00" & x"AAAAAA";
+   signal sign_extended : std_logic_vector(31 downto 0) := X"00007001";
 
- 	--Outputs
+	--BiDirs
    signal PC : std_logic_vector(31 downto 0);
 
    -- Clock period definitions
@@ -74,6 +76,7 @@ BEGIN
           clear => clear,
           isJump => isJump,
           isBranch => isBranch,
+          isHAL => isHAL,
           Jump_Address => Jump_Address,
           sign_extended => sign_extended,
           PC => PC
